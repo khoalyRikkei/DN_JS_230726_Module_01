@@ -11,7 +11,7 @@
    // EX: `$ git remote add origin https://github.com/khoalyRikkei/DN_JS_230726_Module_01.git`
 7. Đẩy dữ liệu lên repo: git push --set-upstream origin master
 
-Sau khi đã push thành công. Sau này mỗi lần up code lên chỉ thực hiện 3 bước:
+## Sau khi đã push thành công. Sau này mỗi lần up code lên chỉ thực hiện 3 bước:
 
 1. `git add .`
 2. `git commit -m "<noi_dung>"`
@@ -19,3 +19,7 @@ Sau khi đã push thành công. Sau này mỗi lần up code lên chỉ thực h
 
 <!-- Test -->
 <!-- Hello world -->
+
+## Clone code
+
+- git clone <link_repo>
