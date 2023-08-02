@@ -25,3 +25,13 @@
 - checked: dùng để checked ban đầu của type radio, checkbox
 - placeholder: mô tả ô input
 - step: bước nhảy giá trị của type number, range, date, datetime-local, month, time and week
+
+## Thư viện icon fontweasome
+
+- link cnd: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+1. Đưa thẻ chứa cnd vào trong head
+2. Truy cập https://fontawesome.com/
+3. Tìm kiếm icon và lựa chọn free
+4. Copy HTML về
+5.
