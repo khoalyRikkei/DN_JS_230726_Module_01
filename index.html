@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session 03 - Form</title>
+    <style>
+      header {
+        margin: 30px 0;
+        color: red;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Session 03 - Form</h1>
+    </header>
+    <a href="#text-form">Đi đến text form</a>
+    <main>
+      <section>
+        <h3>Ví dụ về input - form</h3>
+
+        <p>Form đăng nhập</p>
+        <form>
+          <label for="email">Email</label>
+          <br />
+          <input
+            type="text"
+            placeholder="Nhập email của bạn"
+            id="email"
+            name="email1"
+          />
+          <br />
+          <br />
+          <label for="pw">Password</label>
+          <br />
+          <input
+            type="password"
+            placeholder="Nhập Password của bạn"
+            id="pw"
+            name="password1"
+          />
+
+          <input type="submit" />
+        </form>
+      </section>
+
+      <section>
+        <h3>Một số type của input</h3>
+        <p>Form mua 1 sản phẩm</p>
+        <form>
+          <input type="text" placeholder="Nhập tên của bạn" name="name" />
+          <br />
+          <br />
+          <input type="text" placeholder="Nhập số điện thoại" name="phone" />
+          <br />
+          <br />
+          <input
+            type="text"
+            placeholder="Nhập địa chỉ giao hàng"
+            name="address"
+            value="Đà nẵng"
+            disabled
+          />
+          <br />
+          <br />
+          <input type="date" name="date" />
+          <br />
+          <br />
+          <p>Bạn có muốn in hóa đơn không?</p>
+          <input type="radio" name="invoice" id="invoice-y" value="yes" />
+          <label for="invoice-y">Yes</label>
+          <input type="radio" name="invoice" id="invoice-n" value="no" />
+          <label for="invoice-n">No</label>
+          <br />
+          <br />
+
+          <p>Lựa chọn sản phẩm bạn muốn mua</p>
+
+          <input type="checkbox" name="product-tv" id="product-tv" /><label
+            for="product-tv"
+            >TV</label
+          >
+          <input
+            type="checkbox"
+            name="product-phone"
+            id="product-phone"
+          /><label for="product-phone">Điện thoại</label>
+          <input type="checkbox" name="product-sofa" id="" /><span
+            >Ghế sofa</span
+          >
+          <input type="submit" value="Gửi" />
+          <input type="reset" value="Reset form" />
+        </form>
+      </section>
+      <br />
+      <input type="text" />
+
+      <section>
+        <h3>Google search</h3>
+        <form action="https://google.com/search">
+          <input
+            type="text"
+            placeholder="Nhập thông tin cần tìm"
+            name="q"
+            required
+          />
+          <input type="submit" value="Tìm" />
+        </form>
+      </section>
+      <section>
+        <h3>thẻ select - option</h3>
+      </section>
+
+      <section>
+        <input type="number" max="5" min="1" value="2" />
+      </section>
+
+      <section>
+        <h3>Thẻ select và option</h3>
+        <form>
+          <select name="course" id="">
+            <option>---Lựa chọn khóa học---</option>
+            <option>HTML</option>
+            <option selected>CSS</option>
+            <option>Javascript</option>
+          </select>
+          <button><h3>Hello</h3></button>
+          <input type="button" value="Gửi" />
+          <input type="submit" value="Submit 2" />
+        </form>
+      </section>
+
+      <section>
+        <textarea name="text-textarea" cols="60" rows="5"></textarea>
+
+        <h3 id="text-form">Đây là text form</h3>
+      </section>
+
+      <section>
+        <h3>Type file</h3>
+        <input type="file" name="file-img" id="" />
+      </section>
+    </main>
+
+    <aside>
+      <h3>Note</h3>
+      <ul>
+        <li>
+          thuộc tính for của thẻ &lt; label /&gt; phải giống với id của thẻ &lt;
+          input /&gt; tương ứng
+        </li>
+        <li>
+          &lt; input type="checkbox" /&gt; lựa chọn được nhiều -> khác name
+        </li>
+        <li>
+          &lt; input type="radio" /&gt; thuộc tính name phải trùng nhau nếu muốn
+          lựa chọn 1 trong những giá trị và phải có thuộc tính value để phân
+          biệt
+        </li>
+        <li>
+          thuộc tính require trong form giúp bắt buộc điền giá trị trước khi gửi
+        </li>
+      </ul>
+    </aside>
+  </body>
+</html>
