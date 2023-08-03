@@ -26,3 +26,6 @@
 - margin: tạo khoảng cách bên ngoài element, dùng để tạo khoảng cách giữa các element cạnh nhau
   **_Cách tính width, height trong box model _**
 - Khuyến khích sử dụng thuộc tính box-sizing: border-box để kiểm soát được tổng kích thước element từ border đến content
+
+## Một số nhóm thuộc tính thông dụng
+

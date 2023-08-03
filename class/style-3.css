@@ -1,0 +1,45 @@
+img {
+  width: 100%;
+  object-fit: contain;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* CSS Form */
+#form-credit {
+  width: 600px;
+  padding: 50px 80px;
+  border: 3px solid rgba(128, 128, 128, 0.866);
+  border-radius: 5px;
+}
+#form-credit > * {
+  margin-bottom: 30px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 5px;
+  border-radius: 5px;
+  /* border: none; */
+}
+.row .input-group {
+  display: inline-block;
+  width: 49%;
+}
+
+.image {
+  width: 19%;
+  display: inline-block;
+}
+
+.image label {
+  display: inline-block;
+  padding: 8px 20px;
+  border: 1px solid rgba(128, 128, 128, 0.732);
+  border-radius: 5px;
+  height: 50px;
+  cursor: pointer;
+}
