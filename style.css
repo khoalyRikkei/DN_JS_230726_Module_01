@@ -1,0 +1,57 @@
+header {
+  color: red;
+}
+.box {
+  background-color: blue;
+}
+
+.text-white {
+  color: white;
+}
+
+/* CSS  Descendant Selector*/
+ol li dd {
+  color: orange;
+}
+ol dd {
+  color: red;
+}
+
+/* CSS  child Selector*/
+#selectors > h3 {
+  text-align: center;
+}
+
+/* CSS  child Selector*/
+#selectors + section {
+  font-size: 50px;
+}
+
+/* CSS  child Selector*/
+
+#selectors ~ section {
+  background-color: rgb(196, 175, 175);
+}
+
+/* CSS  pseudo element Selector*/
+h1::after {
+  content: "hello";
+  color: #17a2b8;
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+/* CSS Attribute */
+
+.test-attribute {
+  color: rgba(12, 73, 196, 0.58); /* */
+  font-size: 30px;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #e48f8f7a;
+  width: 500px;
+  height: 300px;
+  text-align: right;
+  text-transform: uppercase;
+}

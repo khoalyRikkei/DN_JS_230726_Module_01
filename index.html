@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session 04 - CSS Basic</title>
+
+    <link
+      rel="icon"
+      href="https://png.pngtree.com/png-clipart/20211024/original/pngtree-hair-logo-png-image_6872014.png"
+    />
+
+    <style>
+      p {
+        color: green;
+        font-size: 20px;
+        background-color: yellow;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+      }
+      div {
+        background-color: green !important;
+      }
+    </style>
+
+    <!-- Cách 3: External -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Session 04 - CSS Basic</h1>
+    </header>
+    <main>
+      <!-- Cách nhúng CSS vào trang web  Ctrl + /-->
+      <section>
+        <h3>Cách CSS vào một file HTML</h3>
+
+        <!-- Cách 1: inline CSS -->
+        <p style="color: red; font-size: 30px">Hello CSS</p>
+
+        <!-- Cách 2: Internal CSS -->
+        <p>Đưa CSS bên trong thẻ style</p>
+
+        <!-- Cách 3: External CSS -> Thường xuyên sử dụng -->
+        <p>Đưa CSS từ file .css vào HTML</p>
+      </section>
+
+      <section id="test-1">
+        <h3>Độ ưu tiên trong CSS</h3>
+        <!-- Độ phổ biến càng thấp -> ưu tiên càng cao -->
+
+        <h4>id > class > tagname</h4>
+        <div class="box text-white">CSS</div>
+      </section>
+
+      <section id="selectors">
+        <h3>Các loại bộ chọn</h3>
+        <ol>
+          <li>Simple Selector: id, class, tagname</li>
+          <li>
+            <dl>
+              <dt>Combinator selector:</dt>
+              <dd>descendant selector</dd>
+              <dd>child selector</dd>
+              <dd>adjacent sibling selector</dd>
+              <dd>general sibling selector</dd>
+            </dl>
+          </li>
+          <ol></ol>
+          li>
+          <li>
+            <dl>
+              <dt>Combinator selector:</dt>
+              <dd>descendant selector</dd>
+              <dd>child selector</dd>
+              <dd>adjacent sibling selector</dd>
+              <dd>general sibling selector</dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Pseudo class selector:</dt>
+              <dd>:hover</dd>
+              <dd>:first-child</dd>
+              <dd>:last-child</dd>
+              <dd>:nth-child()</dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Pseudo element selector:</dt>
+              <dd>::after</dd>
+              <dd>::before</dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Attribute selector:</dt>
+              <dd>:hover</dd>
+              <dd>:first-child</dd>
+              <dd>:last-child</dd>
+              <dd>:nth-child()</dd>
+            </dl>
+          </li>
+          <li><h3>Test child selector</h3></li>
+        </ol>
+        <h3>Các loại bộ chọn 2</h3>
+      </section>
+
+      <section>
+        <h3>Các thuộc tính CSS</h3>
+
+        <p class="test-attribute">dn_js230726</p>
+      </section>
+
+      <section>
+        <p>Em trai của id selectors</p>
+        <h3>Bài tập chuẩn bị</h3>
+        <button>
+          <a href="./prepare/lab-1.html" target="_blank">Bài tập 1</a>
+        </button>
+        <button>
+          <a href="./prepare/lab-2.html" target="_blank">Bài tập 2</a>
+        </button>
+        <button>
+          <a href="./prepare/lab-3.html" target="_blank">Bài tập 3</a>
+        </button>
+      </section>
+      <section>
+        <h3>Bài tập trên lớp</h3>
+        <button>
+          <a href="./class/lab-1.html" target="_blank">Bài tập 1</a>
+        </button>
+        <button>
+          <a href="./class/lab-2.html" target="_blank">Bài tập 2</a>
+        </button>
+        <button>
+          <a href="./class/lab-3.html" target="_blank">Bài tập 3</a>
+        </button>
+      </section>
+      <section>
+        <h3>Bài tập về nhà</h3>
+        <button>
+          <a href="./home/lab-1.html" target="_blank">Bài tập 1</a>
+        </button>
+        <button>
+          <a href="./home/lab-2.html" target="_blank">Bài tập 2</a>
+        </button>
+        <button>
+          <a href="./home/lab-3.html" target="_blank">Bài tập 3</a>
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
