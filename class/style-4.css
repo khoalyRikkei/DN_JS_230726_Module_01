@@ -1,0 +1,86 @@
+/* General CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 20px 0 50px;
+  background-color: #fafafb;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1 {
+  margin: 1em 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Card */
+.card {
+  border-radius: 10px;
+  background-color: grey;
+  padding: 10px;
+  border: 2px solid red;
+}
+
+/* Tab CSS */
+.tab {
+  border-bottom: 1px solid grey;
+  margin-bottom: 20px;
+}
+
+.tab li {
+  display: inline-block;
+  list-style-type: none;
+  text-transform: capitalize;
+  margin-right: 20px;
+  font-weight: 600;
+  padding: 15px 0;
+  cursor: pointer;
+}
+.tab .active {
+  border-bottom: 3px solid blue;
+}
+
+/* Content tab CSS */
+.content-tab {
+  padding: 50px 0;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.content-item {
+  margin-bottom: 30px;
+}
+.content-item .title {
+  display: inline-block;
+  width: 200px;
+  text-align: left;
+}
+.content-item .card {
+  display: inline-block;
+  width: 150px;
+  background-color: rgba(184, 173, 173, 0.452);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+}
+.content-item .card:nth-child(1) {
+  background-color: rgb(0, 145, 255);
+}
+.content-item .card:nth-child(2) {
+  margin: 0 30px;
+  background-color: orange;
+}
+.content-item .card:nth-child(3) {
+  background-color: rgb(0, 255, 106);
+}
