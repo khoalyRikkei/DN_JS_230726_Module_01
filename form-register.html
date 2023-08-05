@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        background-color: #19aa8d;
+      }
+      .form-container {
+        width: 350px;
+        background-color: #fff;
+        padding: 30px;
+        margin: 50px auto;
+        border-radius: 5px;
+      }
+      form > * {
+        margin-bottom: 30px;
+      }
+      .input-group {
+        border: 1px solid grey;
+        border-radius: 5px;
+        /* overflow: hidden; */
+      }
+      .input-group label {
+        padding: 10px;
+        background-color: grey;
+        display: inline-block;
+        border-radius: 2px 0 0 2px;
+      }
+      input {
+        border: none;
+        font-size: 1.1em;
+      }
+      input:focus-visible {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="form-container">
+      <form>
+        <div class="title">
+          <h1>Sign Up</h1>
+          <p>please fill in this form to create and account!</p>
+        </div>
+        <hr />
+        <div class="input-group">
+          <label><i class="fa-solid fa-user"></i></label
+          ><input type="text" placeholder="Username" />
+        </div>
+        <div class="input-group">
+          <label><i class="fa-solid fa-paper-plane"></i></label
+          ><input type="email" placeholder="Email Address" />
+        </div>
+        <div class="input-group">
+          <label><i class="fa-solid fa-lock"></i></label
+          ><input type="password" placeholder="Password" />
+        </div>
+        <div class="input-group">
+          <label><i class="fa-solid fa-unlock-keyhole"></i></label
+          ><input type="password" placeholder="Confirm Password" />
+        </div>
+        <div>
+          <input type="checkbox" name="accept" id="accept" />
+          <label for="accept"
+            >I accept the <a href="#">Terms of Us</a>e &
+            <a href="#">Privace Policy</a></label
+          >
+        </div>
+        <div class="btn">
+          <button type="submit">Sign Up</button>
+        </div>
+      </form>
+      <section class="desc">
+        <p>Already have an account? <a href="#">Login here</a></p>
+      </section>
+    </section>
+  </body>
+</html>

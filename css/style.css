@@ -1,0 +1,112 @@
+:root {
+  font-size: 16px;
+  --color-white: rgb(243, 224, 224);
+  --color-primary: rgba(180, 58, 189, 0.463);
+  --color-secondary: black;
+  --font-size-mobile: 12px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.text-white {
+  color: var(--color-white);
+  background-color: black;
+}
+
+.bg-white {
+  background-color: var(--color-white);
+}
+h1 {
+  color: rgb(34, 182, 88);
+}
+
+h3 {
+  color: rgb(34, 182, 88);
+}
+
+section {
+  color: rgb(34, 182, 88);
+}
+
+/* Opacity */
+
+.box {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 0, 0, 0.74);
+  padding: 20px;
+  /* opacity: 0.4; */
+  border-radius: 100px 30px 5px 1px;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 0, 0, 0.74);
+  border-radius: 50%;
+}
+
+/* box-shadow */
+.box-shadow {
+  margin: 50px auto;
+  width: 200px;
+  height: 300px;
+  background-color: rgb(25, 120, 204);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+/* Text shadow */
+header h1 {
+  font-size: 4em;
+  text-shadow: 0 2px 1px #747474, -1px 3px 1px #767676, -2px 5px 1px #787878,
+    -3px 7px 1px #7a7a7a, -4px 9px 1px #7f7f7f, -5px 11px 1px #838383,
+    -6px 13px 1px #878787, -7px 15px 1px #8a8a8a, -8px 17px 1px #8e8e8e,
+    -9px 19px 1px #949494, -10px 21px 1px #989898, -11px 23px 1px #9f9f9f;
+}
+
+/* linear-gradient */
+
+.linear-gradient {
+  padding: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 55, 121, 1) 35%,
+    rgba(175, 5, 40, 1) 61%,
+    rgba(255, 0, 48, 1) 100%
+  );
+}
+
+.radial-gradient {
+  margin: 50px auto;
+  width: 500px;
+  height: 500px;
+  padding: 20px;
+  background: radial-gradient(
+    circle,
+    rgba(4, 1, 54, 1) 0%,
+    rgba(7, 38, 119, 1) 25%,
+    rgba(50, 104, 181, 1) 50%,
+    rgba(214, 3, 188, 1) 75%,
+    rgba(255, 0, 48, 1) 100%
+  );
+}
+
+/* multi background */
+.background-img {
+  width: 100%;
+  height: 300px;
+
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.7) 100%
+    ),
+    url("https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645.jpg");
+}
+.image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center 10%;
+}
