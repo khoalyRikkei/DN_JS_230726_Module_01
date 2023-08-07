@@ -1,0 +1,15 @@
+h1 {
+  background-color: blue;
+}
+
+.mobile,
+.tablet {
+  display: none;
+}
+.desktop {
+  display: block;
+}
+
+.container {
+  grid-template-columns: repeat(4, 1fr);
+}

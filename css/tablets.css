@@ -1,0 +1,18 @@
+h1 {
+  background-color: white;
+}
+
+.mobile,
+.desktop {
+  display: none;
+}
+.tablet {
+  display: block;
+}
+
+.container {
+  grid-template-columns: 1fr 1fr;
+}
+ul {
+  flex-direction: row;
+}
