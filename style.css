@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+.clear-both {
+  clear: both;
+}
+
+/* Position CSS */
+
+.relative {
+  position: relative;
+  top: 100px;
+  bottom: 50px;
+}
+
+.box-2 {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border: 2px solid green;
+}
+
+.absolute {
+  top: 0px;
+  right: -130px;
+  width: 100px;
+  /* height: 100px; */
+  position: absolute;
+  background-color: red;
+  bottom: 0;
+}
+
+.fixed {
+  position: fixed;
+  padding: 10px;
+  background-color: #fff;
+  top: 0;
+  width: 100%;
+  border: 2px solid orange;
+  width: 40%;
+}
+
+#education {
+  margin: 100px 0;
+}
+.edu-desc {
+  position: relative;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+.edu-desc::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+  left: -20px;
+  top: 5px;
+}
+.edu-desc::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: red;
+  left: -16px;
+  top: 5px;
+}
+
+.edu-container {
+  position: relative;
+}
+.edu-container::after {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 100%;
+  background-color: green;
+  left: 20px;
+  top: 5px;
+}
+
+/* Flex CSS */
+.navbar {
+  margin: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  border: 1px solid violet;
+  align-items: center;
+}
+
+.navbar > * {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+}
+
+.flex-btn {
+  height: 50px;
+  width: 150px;
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-flex {
+  display: flex;
+  gap: 20px;
+}
+
+.item-flex {
+  height: 300px;
+  border: orange 1px solid;
+  flex: 1;
+}
+/* .item-1 {
+  flex-grow: 1;
+}
+.item-2 {
+  flex-grow: 2;
+}
+
+.item-3 {
+  flex-grow: 3;
+}
+
+.item-4 {
+  flex-grow: 4;
+} */

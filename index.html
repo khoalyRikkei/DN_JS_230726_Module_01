@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session 06 - Layout Structure</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header><h1>Session 06 - Layout Structure</h1></header>
+    <main>
+      <section>
+        <h3>Float Example</h3>
+        <p>
+          Kiểu chữ (tiếng Anh là typeface hoặc font family) là định dạng bảng
+          chữ cái có cùng chung một đặc tính thiết kế. Một kiểu chữ đơn lẻ được
+          thể hiện bằng độ đậm, phong cách, cách chữ, độ rộng, độ nghiêng, in
+          nghiêng, sự trang trí và nhà thiết kế nhưng không phải là kích
+          thước.[1] Ngày này kiểu chữ thường dùng tương đương với thuật ngữ là
+          phông chữ (font) mặc dù chúng có ý nghĩa rất khác nhau trước khi sự
+          phát minh của typography kỹ thuật số ra đời.
+        </p>
+        <div class="box float-left"></div>
+        <div class="box float-right"></div>
+
+        <p class="clear-both">
+          Kiểu chữ (tiếng Anh là typeface hoặc font family) là định dạng bảng
+          chữ cái có cùng chung một đặc tính thiết kế. Một kiểu chữ đơn lẻ được
+          thể hiện bằng độ đậm, phong cách, cách chữ, độ rộng, độ nghiêng, in
+          nghiêng, sự trang trí và nhà thiết kế nhưng không phải là kích
+          thước.[1] Ngày này kiểu chữ thường dùng tương đương với thuật ngữ là
+          phông chữ (font) mặc dù chúng có ý nghĩa rất khác nhau trước khi sự
+          phát minh của typography kỹ thuật số ra đời.
+        </p>
+        <p>
+          Kiểu chữ (tiếng Anh là typeface hoặc font family) là định dạng bảng
+          chữ cái có cùng chung một đặc tính thiết kế. Một kiểu chữ đơn lẻ được
+          thể hiện bằng độ đậm, phong cách, cách chữ, độ rộng, độ nghiêng, in
+          nghiêng, sự trang trí và nhà thiết kế nhưng không phải là kích
+          thước.[1] Ngày này kiểu chữ thường dùng tương đương với thuật ngữ là
+          phông chữ (font) mặc dù chúng có ý nghĩa rất khác nhau trước khi sự
+          phát minh của typography kỹ thuật số ra đời.
+        </p>
+        <p>
+          Kiểu chữ (tiếng Anh là typeface hoặc font family) là định dạng bảng
+          chữ cái có cùng chung một đặc tính thiết kế. Một kiểu chữ đơn lẻ được
+          thể hiện bằng độ đậm, phong cách, cách chữ, độ rộng, độ nghiêng, in
+          nghiêng, sự trang trí và nhà thiết kế nhưng không phải là kích
+          thước.[1] Ngày này kiểu chữ thường dùng tương đương với thuật ngữ là
+          phông chữ (font) mặc dù chúng có ý nghĩa rất khác nhau trước khi sự
+          phát minh của typography kỹ thuật số ra đời.
+        </p>
+        <p>
+          Kiểu chữ (tiếng Anh là typeface hoặc font family) là định dạng bảng
+          chữ cái có cùng chung một đặc tính thiết kế. Một kiểu chữ đơn lẻ được
+          thể hiện bằng độ đậm, phong cách, cách chữ, độ rộng, độ nghiêng, in
+          nghiêng, sự trang trí và nhà thiết kế nhưng không phải là kích
+          thước.[1] Ngày này kiểu chữ thường dùng tương đương với thuật ngữ là
+          phông chữ (font) mặc dù chúng có ý nghĩa rất khác nhau trước khi sự
+          phát minh của typography kỹ thuật số ra đời.
+        </p>
+      </section>
+
+      <section>
+        <h3>Thuộc tính position relative</h3>
+        <div class="box-2"></div>
+        <div class="relative box-2"></div>
+      </section>
+
+      <section>
+        <h3>Thuộc tính position absolute</h3>
+        <div class="box-2 relative">
+          <div class="absolute"></div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Thuộc tính position fixed</h3>
+        <div class="fixed">Tôi là fixed</div>
+      </section>
+
+      <section>
+        <h3>Ứng dụng Position vào bài tập</h3>
+        <div id="education">
+          <div class="edu-title">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <div class="edu-text">
+              <span>EDUCATION</span>
+            </div>
+          </div>
+          <div class="edu-container">
+            <div class="edu-desc">
+              <span>2015 - 2017</span>
+              <h4>LOREM ISPUM</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="edu-desc">
+              <span>2017 - 2018</span>
+              <h4>LOREM ISPUM</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="edu-desc">
+              <span>2018 - 2019</span>
+              <h4>LOREM ISPUM</h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Flex</h3>
+
+        <header>
+          <nav class="navbar">
+            <ul class="navbar-aside-left">
+              <div class="logo">
+                <i class="fa-brands fa-facebook logo"></i>
+              </div>
+              <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass search"></i>
+                <input type="text" />
+              </div>
+            </ul>
+            <ul class="navbar-menu">
+              <li>
+                <a href="#"><i class="fa-solid fa-house"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-user-group"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-store"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-users"></i></a>
+              </li>
+            </ul>
+            <ul class="navbar-aside-right">
+              <li>
+                <a href="#"><i class="fa-solid fa-list"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-bell"></i></a>
+              </li>
+              <div class="image">
+                <img src="../images/mountains-8144681_640.jpg" alt="" />
+              </div>
+            </ul>
+          </nav>
+        </header>
+
+        <div class="flex-btn">
+          <i class="fa-brands fa-facebook logo"></i>Click me
+        </div>
+      </section>
+
+      <section>
+        <h3>Flex item</h3>
+
+        <div class="container-flex">
+          <div class="item-flex item-1"></div>
+          <div class="item-flex item-2"></div>
+          <div class="item-flex item-3"></div>
+          <div class="item-flex item-4"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
