@@ -1,0 +1,57 @@
+/* Trường hợp hay sửd dụng */
+
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  /* grid-template-rows */
+  /* gap: 20px; */
+
+  column-gap: 20px;
+}
+/* fr --> tự động trừ phần gap -> chia theo tỉ lệ */
+.item {
+  border: 2px solid red;
+  /* white-space: wrap; */
+}
+
+/* Trường hợp chia layout */
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "nav  nav  nav  nav  nav  nav    "
+    "aside-left main main main main aside-right  "
+    "footer footer footer footer footer footer ";
+}
+
+body > * {
+  border: 2px solid orange;
+}
+
+header {
+  /* Khai báo area */
+  grid-area: header;
+}
+nav {
+  /* Khai báo area */
+  grid-area: nav;
+}
+
+.aside-left {
+  /* Khai báo area */
+  grid-area: aside-left;
+}
+
+.aside-right {
+  /* Khai báo area */
+  grid-area: aside-right;
+}
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
