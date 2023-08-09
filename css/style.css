@@ -31,6 +31,11 @@ a {
   font-weight: 600;
 }
 
+.card {
+  padding: 25px 20px;
+  border-radius: 5px;
+}
+
 /* ICON CSS */
 .icon {
   display: inline-block;
@@ -64,6 +69,21 @@ a {
   width: 20px;
   height: 20px;
   background-image: url("../images/icons/search.png");
+}
+.icon--calendar {
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/icons/calendar.png");
+}
+.icon--team {
+  width: 50px;
+  height: 42.5px;
+  background-image: url("../images/icons/team.png");
+}
+.icon--cash {
+  width: 50px;
+  height: 36.5px;
+  background-image: url("../images/icons/cash.png");
 }
 
 /* btn css */
@@ -137,4 +157,45 @@ a {
   display: flex;
   align-items: center;
   gap: 30px;
+}
+
+/* banner */
+
+.banner {
+  background-image: url("../images/banner.png");
+  height: 550px;
+  background-size: cover;
+  width: 100%;
+}
+.banner > * {
+  height: 100%;
+}
+
+.banner__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.banner__content__sub-title {
+  font-size: 18px;
+  font-family: "Work Sans";
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+.banner__content__title {
+  font-size: 24px;
+  font-family: "Yeseva One", cursive;
+  /* max-width: 520px; */
+  color: var(--color-primary);
+  margin-bottom: 32px;
+  margin-top: 8px;
+}
+
+/* booking */
+
+#booking {
+  display: flex;
+  justify-content: space-between;
 }
