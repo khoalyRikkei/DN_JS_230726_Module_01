@@ -1,0 +1,140 @@
+:root {
+  --color-secondary: #159eec;
+  --color-accent: #bfd2f8;
+  --color-primary: #1f2b6c;
+  --color-black: #212124;
+  --color-white: #fcfefe;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  color: var(--color-black);
+}
+
+/* General CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 992px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.active {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* ICON CSS */
+.icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* text */
+.text--secondary {
+  color: var(--color-secondary);
+}
+
+.icon--phone {
+  width: 40.198px;
+  height: 38.19px;
+  background-image: url("../images/icons/phone.png");
+}
+.icon--location {
+  width: 40.198px;
+  height: 38.19px;
+  background-image: url("../images/icons/location.png");
+}
+.icon--clock {
+  width: 30px;
+  height: 36px;
+  background-image: url("../images/icons/clock.png");
+}
+.icon--search {
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/icons/search.png");
+}
+
+/* btn css */
+.btn {
+  background-color: var(--color-accent);
+  padding: 13px 35px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+/* topbar CSS */
+.topbar {
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.topbar > * {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  align-items: center;
+}
+
+/* logo top */
+.topbar__logo {
+  font-family: "Yeseva One", cursive;
+  font-weight: 400;
+  font-size: 36px;
+}
+.topbar__logo span {
+  color: var(--color-secondary);
+}
+
+.topbar__info {
+  display: flex;
+  gap: 20px;
+  font-weight: 500;
+}
+
+/* info icon */
+.topbar__info > * {
+  display: flex;
+  gap: 10px;
+}
+
+.topbar__info > * p:last-child {
+  text-transform: capitalize;
+}
+/* navbar CSS */
+.navbar {
+  background-color: var(--color-primary);
+}
+
+.navbar > * {
+  display: flex;
+  padding: 17px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__menu {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+  color: white;
+  text-transform: capitalize;
+}
+.navbar__feature {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
