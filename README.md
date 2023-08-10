@@ -48,4 +48,8 @@
 
 ### truthy và falsy
 
-- falsy: 0, null, undefined, " ", false, NaN 
+- falsy: 0, null, undefined, " ", false, NaN
+
+### git clone -- git pull
+
+- git pull
