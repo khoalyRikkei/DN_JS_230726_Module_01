@@ -166,6 +166,12 @@ function bai_05() {
     "Chu vi hình tròn là: " + perimeter + " và diện tích là: " + area;
 }
 
+function bai_06() {
+  const color = prompt("Nhập vào một màu bất kỳ");
+  console.log("%cBạn đã đổi màu trong console.log()", `color: ${color}`);
+  //   dấu backtick (`)
+}
+
 a = 6;
 
 console.log(++a + a + a++ + ++a + a);
@@ -181,3 +187,16 @@ console.log(a);
 // } else {
 //   console.log("Helle falsy");
 // }
+
+// Bài tập 1: Nhập 1 số --> Thông báo người dùng số chẵn hay lẻ
+// Bài tập 2: Nhập tuổi --> Cho xem thể loại film tương ứng
+// (dưới 16t: xem thiếu nhi, dưới 18: xem phim hành động + thiếu nhi, từ 18 trở lên: xem được các loại film)
+// Bài tập 3: Nhập điểm toán, lý, hóa, sinh --> Cho biết học sinh đạt loại gì
+
+// Giỏi: tổng điểm trung bình lớn hơn 8.0, không có môn dưới 7đ
+
+// Khá: tổng điểm trung bình lớn hơn 7.0, không có môn dưới 5đ
+
+// Trung bình: tổng điểm trung bình lớn hơn 5.0, không có môn dưới 3.5đ
+
+// Yếu: còn lại

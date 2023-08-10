@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text " placeholder="Nhập số tiền" id="money" />
+    <select name="" id="select-unit">
+      <option value="VND">VNĐ</option>
+      <option value="USD">USD</option>
+    </select>
+
+    <input type="text" disabled id="money-output" /> <span id="unit"></span>
+    <button onclick="convert()">Convert</button>
+  </body>
+
+  <script>
+    function convert() {
+      // Giá trị nhập
+      const moneyValue = Number(document.querySelector("#money").value);
+      const selectUnitValue = document.querySelector("#select-unit").value;
+
+      //   Giá trị xuất
+      const moneyElement = document.querySelector("#money-output");
+      const unitElement = document.querySelector("#unit");
+      let moneyConvert;
+
+      if (selectUnitValue == "VND") {
+        moneyConvert = (moneyValue / 23000).toFixed(2);
+        unitElement.innerHTML = "USD";
+      } else {
+        moneyConvert = (moneyValue * 23000).toFixed(2);
+        unitElement.innerHTML = "VNĐ";
+      }
+      moneyElement.value = moneyConvert;
+    }
+  </script>
+</html>

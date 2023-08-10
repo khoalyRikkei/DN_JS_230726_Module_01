@@ -52,4 +52,5 @@
 
 ### git clone -- git pull
 
-- git pull
+- git clone <link_repo>
+- git pull //các file đã được commit, push hoặc file không đổi --> giúp lấy file mới nhất từ repo về
