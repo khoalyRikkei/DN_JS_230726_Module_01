@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session 08 - Javascript</title>
+    <style>
+      fieldset {
+        margin: 20px 0;
+        border: 2px solid grey;
+        border-radius: 5px;
+        padding: 20px;
+      }
+      legend {
+        padding: 10px 20px;
+        background-color: orange;
+        border: 2px solid grey;
+        border-radius: 5px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Session 08 - Javascript</h1></header>
+
+    <main>
+      <section>
+        <h3>Nhúng JS inline</h3>
+        <button onclick="alert('Hello Đà Nẵng!')">Chào</button>
+      </section>
+
+      <section>
+        <h3>Các hàm build thông dụng</h3>
+        <button onclick="alert('Đây là một thông báo!')">Alert</button>
+        <button
+          onclick="prompt('Đây là một hộp thoại, người dùng điền thông tin vào!')"
+        >
+          Prompt
+        </button>
+
+        <button onclick="confirm('Đây là câu hỏi yes/no!')">confirm</button>
+      </section>
+
+      <fieldset>
+        <legend>Bài 1</legend>
+        <h3>Bài tập tính điểm trung bình</h3>
+        <button onclick="bai_01()">Nhập thông tin</button>
+      </fieldset>
+      <fieldset>
+        <legend>Bài 2</legend>
+        <h3>Chuyển đổi tiền tệ</h3>
+        <button onclick="bai_02()">Nhập số tiền</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Bài 3</legend>
+        <h3>Hiển thị họ và tên</h3>
+        <button onclick="bai_03()">Nhập tên</button>
+        <button onclick="bai_03_1()">Nhập tuổi</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Bài 4</legend>
+        <h3>Chuyển đổi C -> F</h3>
+        <button onclick="bai_04()">Nhập độ C</button>
+        <p id="result-4"></p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Bài 5</legend>
+        <h3>Tính chu vi hình tròn</h3>
+        <button onclick="bai_05()">Tính</button>
+        <p id="result-5"></p>
+      </fieldset>
+    </main>
+  </body>
+
+  <!-- Nhúng Internal -->
+  <script>
+    // alert("Xin chào lớp JS tháng 7");
+  </script>
+
+  <script src="./script.js"></script>
+</html>
