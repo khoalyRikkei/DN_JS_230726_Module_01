@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session 12 - Loops</title>
+    <style>
+      main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding: 50px;
+        background-color: #d6d6d6;
+      }
+
+      fieldset {
+        border: none;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 2px 2px 5px #b7b6b69c;
+        min-width: 250px;
+      }
+      legend {
+        padding: 8px 20px;
+        border-radius: 8px;
+        background-color: rgb(237, 147, 50);
+        font-weight: 600;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Session 12 - Loops</h1></header>
+    <main>
+      <fieldset>
+        <legend>Example FOR</legend>
+        <h3>Ví dụ về vòng lặp</h3>
+
+        <button onclick="ex_01()">Click</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Example FOR</legend>
+        <h3>Ví dụ về bảng cửu chương 6</h3>
+        <button onclick="ex_02()">Click</button>
+      </fieldset>
+      <fieldset>
+        <legend>Example FOR</legend>
+        <h3>Ví dụ về bảng cửu chương bất kỳ</h3>
+        <button onclick="ex_03()">Click để nhập</button>
+        <div id="result-ex-03"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Example FOR</legend>
+        <h3>Ví dụ chẵn lẻ</h3>
+        <button onclick="ex_04()">Click</button>
+        <button onclick="ex_04_1()">Click</button>
+
+        <!-- <div id="result-ex-03"></div> -->
+      </fieldset>
+
+      <fieldset>
+        <legend>Example WHILE</legend>
+        <h3>Ví dụ while</h3>
+        <button onclick="ex_05()">Click</button>
+
+        <!-- <div id="result-ex-03"></div> -->
+      </fieldset>
+
+      <fieldset>
+        <legend>Example WHILE</legend>
+        <h3>Chuyển đổi giữa for và while</h3>
+        <p>Tìm tổng 5 số chẵn</p>
+
+        <button onclick="ex_06()">Sử dụng for</button>
+        <button onclick="ex_06_1()">Sử dụng while</button>
+
+        <!-- <div id="result-ex-03"></div> -->
+      </fieldset>
+
+      <fieldset>
+        <legend>Example WHILE</legend>
+        <h3>Chuyển đổi giữa while</h3>
+        <p>Tìm tổng 5 số chẵn</p>
+
+        <button onclick="ex_07()">Click độ dài tam giác</button>
+
+        <div id="result-ex-07"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Example DO WHILE</legend>
+        <h3>Ví dụ do while</h3>
+        <p>
+          Tính tổng các số dương được nhập từ bàn phím. Nếu nhập bé hơn 0 ->
+          Hiển thị kết quả
+        </p>
+
+        <button onclick="ex_08()">Click</button>
+
+        <div id="result-ex-08"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Example</legend>
+        <h3>Vòng lặp lồng</h3>
+        <p>Tạo bảng cửu chương</p>
+
+        <button onclick="ex_09()">Click</button>
+
+        <div id="result-ex-09"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Bài tập 1</legend>
+        <h3>
+          Viết chương trình hiển thị thay đổi 10 màu sắc ngẫu nhiên khi hiển thị
+          console.log()
+        </h3>
+
+        <button onclick="lab_01()">Click</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Bài tập 2</legend>
+        <h3>
+          Viết chương trình hiển thị các số từ 1 🡪 100. Nếu số đó chia hết cho 3
+          thì hiển thị là “Fizz”, nếu số đó chia hết cho 5 thì hiển thị là
+          “Buzz”. Nếu số đó chia hế cho 3 và 5 thì hiển thị “FizzBuzz”
+        </h3>
+
+        <button onclick="lab_02()">Click</button>
+        <button onclick="lab_02_1()">Click 2</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Bài tập 3</legend>
+        <h3>Kiểm tra số nguyên tố</h3>
+
+        <button onclick="lab_03()">Click</button>
+        <button onclick="lab_03_1()">Click 2</button>
+        <div id="result-lab-03"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Bài tập 4</legend>
+        <h3>Số hoàn hảo</h3>
+
+        <button onclick="lab_04()">Nhập</button>
+        <div id="result-lab-04"></div>
+      </fieldset>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
