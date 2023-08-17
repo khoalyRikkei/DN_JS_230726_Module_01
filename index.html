@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session 14 - Array</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Session 14 - Array</h1></header>
+    <main>
+      <fieldset>
+        <legend>Example</legend>
+        <h3>Ví dụ về array</h3>
+        <button onclick="ex_01()">Click</button>
+        <ol class="result-ex-01"></ol>
+      </fieldset>
+
+      <fieldset>
+        <legend>Phương thức push()</legend>
+        <h3>Ví dụ về array</h3>
+        <p>
+          Thêm một hoặc nhiều phần tử vào cuối mảng - trả về một chiều dài mới
+          của mảng
+        </p>
+        <button onclick="ex_02()">Click</button>
+        <button onclick="ex_02_1()">Click để add</button>
+        <ol class="result-ex-02"></ol>
+      </fieldset>
+
+      <fieldset>
+        <legend>Phương thức join()</legend>
+        <h3>Ví dụ về array</h3>
+        <p>
+          Chuổi đôit array thành một string, trả về một string mới và có thể
+          thay thế dấu (,) trong bằng một ký tự khác
+        </p>
+        <button onclick="ex_03()">Click</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Phương thức concat()</legend>
+        <h3>Ví dụ về array</h3>
+        <p>Nối 2 mảng lại với nhau và trả về một mảng mới</p>
+        <button onclick="ex_04()">Click</button>
+      </fieldset>
+      <fieldset>
+        <legend>Phương thức splice()</legend>
+        <h3>Ví dụ về array</h3>
+        <p>Thêm, thay thế hoặc xóa phần tử trong mảng</p>
+        <button onclick="ex_05()">Click</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Mảng 2 chiều</legend>
+        <h3>Tạo bảng cửu chương</h3>
+
+        <button onclick="ex_06()">Click</button>
+        <table border="1" cellpadding="10">
+          <tbody class="result-ex-06"></tbody>
+        </table>
+      </fieldset>
+
+      <!-- Bài tập -->
+
+      <fieldset>
+        <legend>Bài tập 1</legend>
+        <h3>
+          Viết chương trình khởi tạo nhập vào một mảng số nguyên gồm 10 phần tử.
+          Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn
+          hơn hoặc bằng 10
+        </h3>
+
+        <button onclick="lab_01()">Click</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Bài tập 2</legend>
+        <h3>
+          Viết chương trình khởi tạo nhập vào một mảng số nguyên gồm 10 phần tử
+          khác nhau. Chương trình hiển thị ra được phần tử có giá trị lớn nhất
+          trong mảng và vị trí của phần tử đó.
+        </h3>
+
+        <button onclick="lab_02()">Click</button>
+        <button onclick="lab_02_1()">Click</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Bài tập 3</legend>
+        <h3>
+          Viết chương trình khởi tạo nhập vào một mảng số nguyên và đảo ngược
+          các phần tử trong mảng đó
+        </h3>
+
+        <button onclick="lab_03()">Click</button>
+      </fieldset>
+    </main>
+  </body>
+  <script src="/script.js"></script>
+</html>
