@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do app</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: rgb(195, 34, 194);
+        background: linear-gradient(
+          117deg,
+          rgba(195, 34, 194, 1) 0%,
+          rgba(45, 203, 253, 1) 100%
+        );
+      }
+
+      .container {
+        width: 100%;
+        min-height: 100vh;
+      }
+      .todo-app {
+        width: 100%;
+        max-width: 540px;
+        background: #fff;
+        border-radius: 10px;
+        margin: 100px auto 20px;
+        padding: 25px 40px 70px;
+      }
+      .todo-app h2 {
+        margin-bottom: 20px;
+        font-size: 35px;
+        margin: 40px auto;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 70px;
+        font-weight: bold;
+        color: #4a4a46;
+        text-align: center;
+        letter-spacing: 5px;
+        text-shadow: 0px 11px 10px rgba(81, 67, 21, 0.8);
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #edeef0;
+        border-radius: 40px;
+        padding: 5px;
+        margin-bottom: 20px;
+      }
+      input {
+        flex: 1;
+        border: none;
+        outline: none;
+        background: #edeef0;
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      #add-container {
+        border: none;
+        outline: none;
+        padding: 10px 40px;
+        background: #ff5945;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 40px;
+      }
+
+      ul {
+        display: grid;
+        grid-template-rows: 1fr;
+        gap: 10px;
+      }
+      .check {
+        padding-left: 10px;
+        padding-right: 0px;
+      }
+
+      ul li {
+        width: 100%;
+        list-style: none;
+        font-size: 18px;
+        padding: 10px 40px;
+        user-select: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      }
+
+      ul li p {
+        flex-wrap: wrap;
+        width: 300px;
+        overflow: hidden;
+        word-wrap: break-word;
+      }
+
+      #btn-edit {
+        border: none;
+        border-radius: 5px;
+        font-weight: 600;
+        color: white;
+        background-color: #00a2ff;
+        margin: 0 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+
+      #btn-del {
+        border: none;
+        border-radius: 5px;
+        font-weight: 600;
+        color: white;
+        background-color: #f83504dc;
+        margin: 0 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="todo-app">
+        <h2>To Do List</h2>
+        <div class="row">
+          <input
+            type="text"
+            name=""
+            id="input-add"
+            placeholder="Nhập nhiệm vụ"
+          />
+          <button id="add-container" onclick="handleAdd()">ADD</button>
+        </div>
+        <ul id="list-container">
+          <li>Xin hãy nhập nhiệm vụ mới !!!!!</li>
+          <!-- <li class="check">
+              <p>Xin hãy nhập nhiệm vụ mới</p>
+              <div class="btn-container"><button id="btn-edit" onclick="btn_edit()">Edit</button
+                ><button id="btn-del" onclick="btn_del()">Delete</button></div>
+            </li> -->
+        </ul>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    // Cơ sở dữ liệu
+    const tasks = [];
+    renderTask(tasks);
+
+    // create - tạo nhiệm vụ mới
+    function handleAdd() {
+      // B1: Truy vấn tới ô input cần lấy dữ liệu
+      const addInputElement = document.querySelector("#input-add");
+
+      //   B2: Lấy giá trị ô input
+      const addValue = addInputElement.value;
+
+      // B3: Thêm vào database
+      tasks.push(addValue);
+
+      // B4: Hiển thị theo database
+      renderTask(tasks);
+    }
+
+    // read - render dữ liệu
+    function renderTask(data) {
+      // B1: Truy vấn phần tử - nơi cần hiển thị
+      const listContainerElement = document.querySelector("#list-container");
+
+      //   B2: Tạo nội dung hiển thị
+      let listContainerContent = ""; //string
+
+      //   B3: lặp qua data để thêm nội dung mới vào
+      for (let i = 0; i < data.length; i++) {
+        listContainerContent += ` 
+        <li class="check">
+              <p>${data[i]}</p>
+              <div class="btn-container"><button id="btn-edit" onclick="handleEdit(${i})">Edit</button
+                ><button id="btn-del" onclick="handleDelete(${i})">Delete</button></div>
+        </li>`; // nối các phần tử html vào
+      }
+
+      //   B4: gán lại HTML
+      listContainerElement.innerHTML = listContainerContent;
+    }
+
+    // Delete - Xóa dữ liệu database
+    function handleDelete(index) {
+      // B1: truyền index lúc read - render
+      console.log(index);
+      //   B2: Xóa dữ liệu
+      tasks.splice(index, 1);
+
+      // B3: Hiển thị lại
+      renderTask(tasks);
+    }
+
+    function handleEdit(index) {
+      console.log("kiểm tra index", index);
+
+      // B1: Lấy task từ database
+      const editTask = tasks[index];
+
+      //   B2: Nhập thông tin mới
+      const newTask = prompt("Sửa nhiệm vụ của bạn", editTask);
+
+      //   B3: Thay thế
+      tasks.splice(index, 1, newTask);
+
+      // B4: Hiển thị lại
+      renderTask(tasks);
+    }
+  </script>
+</html>
