@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Bài 1</legend>
+      <h3>Task</h3>
+      <button onclick="lab_01()">Click</button>
+    </fieldset>
+    <fieldset>
+      <legend>Bài 2</legend>
+      <h3>Thêm xếp loại học viên</h3>
+      <button onclick="lab_02()">Click</button>
+    </fieldset>
+    <fieldset>
+      <legend>Bài 3</legend>
+      <h3>Nhập thông tin học viên</h3>
+      <button onclick="lab_03()">Click</button>
+    </fieldset>
+    <fieldset>
+      <legend>Bài 4</legend>
+      <h3>CRUD</h3>
+      <button onclick="lab_04()">Click</button>
+    </fieldset>
+  </body>
+  <script>
+    function lab_01() {
+      console.log("kiểm tra date", new Date("2203/08/10").toISOString());
+      const tasks = [
+        {
+          name: "Task 1",
+          content: "Nhiệm vụ lần 1",
+          date: new Date("2203/08/10").toISOString(),
+          status: true,
+        },
+        {
+          name: "Task 2",
+          content: "Nhiệm vụ lần 2",
+          date: new Date("2203/07/10").toISOString(),
+          status: false,
+        },
+        {
+          name: "Task 3",
+          content: "Nhiệm vụ lần 3",
+          date: new Date("2203/09/10").toISOString(),
+          status: false,
+        },
+      ];
+
+      tasks.push({
+        name: "Task 4",
+        content: "Nhiệm vụ lần 4",
+        date: new Date("2203/09/10").toISOString(),
+        status: false,
+      });
+
+      console.log("kiểm tra task", tasks);
+      for (const task of tasks) {
+        console.log(task.name);
+        console.log("Kiểm tra content", task.content);
+      }
+
+      for (const key in tasks[0]) {
+        console.log("Kiểm tra key", key);
+        tasks[0][key] = "fail";
+      }
+    }
+
+    function lab_02() {
+      // Input
+      const students = [
+        { name: "Nguyễn Văn A", age: 20, averageMark: 8 },
+        { name: "Nguyễn Văn B", age: 20, averageMark: 6 },
+        { name: "Nguyễn Văn C", age: 20, averageMark: 5 },
+        { name: "Nguyễn Văn D", age: 20, averageMark: 0 },
+        { name: "Nguyễn Văn E", age: 20, averageMark: 9 },
+        { name: "Nguyễn Văn F", age: 20, averageMark: 7 },
+      ];
+
+      for (const student of students) {
+        if (student.averageMark >= 8) {
+          student.rank = "Giỏi";
+        } else if (student.averageMark >= 7) {
+          student.rank = "Khá";
+        } else if (student.averageMark >= 5) {
+          student.rank = "Trung Bình";
+        } else {
+          student.rank = "Yếu";
+        }
+        console.log("tên hv", student.name, " xếp hạng: ", student.rank);
+      }
+
+      console.log(students);
+      // out
+      const students_2 = [
+        { name: "Nguyễn Văn A", age: 20, averageMark: 8, rank: "Giỏi" },
+        { name: "Nguyễn Văn B", age: 20, averageMark: 6, rank: "Trung bình" },
+        { name: "Nguyễn Văn C", age: 20, averageMark: 5, rank: "Trung bình" },
+      ];
+
+      const numbers = [1, 2, 4, 5];
+      for (const number of numbers) {
+        // number = 20;
+      }
+
+      console.log(numbers);
+    }
+
+    function lab_03() {
+      const students = [];
+      let number = Number(prompt("Nhập vào số lượng học viên cần thêm vào"));
+      do {} while (number > 0);
+    }
+
+    const courses = [];
+
+    // {
+    //     name: "",
+    //     status: Boolean
+    // }
+
+    function lab_04() {
+      let action;
+      do {
+        action = prompt("Nhập C/R/U/D để thực hiện hành động, nhập E để thoát");
+        switch (action) {
+          case "C":
+            create();
+            break;
+          case "R":
+            read();
+            break;
+          case "U":
+            update();
+            break;
+          case "D":
+            _delete();
+            break;
+          case "E":
+            break;
+          default:
+            alert("Vui lòng nhập đúng C/R/U/D hoặc E để thoát!! ");
+        }
+      } while (action !== "E");
+    }
+
+    function create(index) {
+      console.log(">>>> index",index);
+      // B1: Nhập thông tin khóa học
+      const courseName = prompt("Nhập tên khóa học");
+      const courseStatus = confirm("Bạn hoàn thành khóa học chưa?");
+
+      //   B2: Tạo đối tượng khóa học
+      const newCourse = {
+        name: courseName,
+        status: courseStatus,
+      };
+
+      //   B3: Lưu khóa học vào mảng
+      if (index || index === 0) { // typeof index === "number"
+        courses.splice(index, 1, newCourse);
+      } else {
+        courses.push(newCourse);
+      }
+
+      // B4: Hiển thị màn hình
+      read();
+    }
+    function read() {
+      //   Xác định mảng hiển thị
+      //   for (const course of courses) {
+      //     console.log(course.name);
+      //     console.log("Complete: ", course.status);
+      //   }
+
+      for (let index = 0; index < courses.length; index++) {
+        const course = courses[index];
+        console.log(`${index + 1}.`, course.name);
+        console.log("Complete: ", course.status);
+      }
+    }
+    function update() {
+      const index = Number(prompt("Nhập vào vị trí khóa học")) - 1; // vì lúc hiển thị cộng thêm 1
+      if (index >= 0 && index < courses.length) {
+        create(index);
+      } else {
+        alert(
+          "Không có vị trí phù hơp, vui lòng nhập từ 1 đến " + courses.length
+        );
+      }
+    }
+    function _delete() {
+      const index = Number(prompt("Nhập vào vị trí khóa học")) - 1; // vì lúc hiển thị cộng thêm 1
+      if (index >= 0 && index < courses.length) {
+        courses.splice(index, 1);
+      } else {
+        alert(
+          "Không có vị trí xóa nào phù hơp, vui lòng nhập từ 1 đến " +
+            courses.length
+        );
+      }
+    }
+  </script>
+</html>
