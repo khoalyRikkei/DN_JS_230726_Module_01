@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      tr,
+      td {
+        border-collapse: collapse;
+      }
+      td {
+        padding: 10px 20px;
+      }
+      tr {
+        border-bottom: 1px solid grey;
+      }
+      table thead tr {
+        background-color: rgb(240, 162, 90) !important;
+      }
+      table tr:nth-child(odd) {
+        background-color: rgb(56, 173, 220);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Khóa học tiếng Nhật tháng 9</h1>
+    <table id="store">
+      <caption>
+        Danh sách khóa học
+      </caption>
+      <thead>
+        <tr>
+          <td>#</td>
+          <td>Tên khóa học</td>
+          <td>Price</td>
+          <td>Trạng thái</td>
+          <td>Hành Động</td>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <br />
+    <hr />
+    <h3>Giỏ hàng</h3>
+
+    <table id="buyer">
+      <caption>
+        Giỏ hàng của tôi
+      </caption>
+      <thead>
+        <tr>
+          <td>#</td>
+          <td>Tên khóa học</td>
+          <td>Price</td>
+          <td>Số lượng</td>
+          <td>Hành Động</td>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </body>
+  <script>
+    const store = [
+      { id: "course_01", name: "Tiếng Nhật N1", price: 500, slot: 5 },
+      { id: "course_02", name: "Tiếng Nhật N2", price: 450, slot: 20 },
+      { id: "course_03", name: "Tiếng Nhật N3", price: 300, slot: 20 },
+      { id: "course_04", name: "Tiếng Nhật N4", price: 200, slot: 20 },
+      { id: "course_05", name: "Tiếng Nhật N5", price: 150, slot: 0 },
+    ];
+
+    renderStore(store);
+    function renderStore(data) {
+      const tbodyElement = document.querySelector("#store tbody");
+      let tbodyContent = "";
+      for (let index = 0; index < data.length; index++) {
+        const course = data[index];
+
+        tbodyContent += `
+        <tr>
+          <td>${index + 1}</td>
+          <td>${course.name}</td>
+          <td>$${course.price}</td>
+          <td>${course.slot ? "Còn chỗ trống" : "Hết chỗ"}</td>
+          <td><button onclick="handleBuy('${course.id}')" ${
+          course.slot ? "" : "disabled"
+        }>Buy</button></td>
+        </tr>`;
+      }
+
+      tbodyElement.innerHTML = tbodyContent;
+    }
+
+    // Người mua
+    const carts = [
+      { id: "course_01", name: "Tiếng Nhật N1", price: 500, quantity: 2 },
+    ];
+    renderCart(carts);
+    function renderCart(data) {
+      const tbodyElement = document.querySelector("#buyer tbody");
+      let tbodyContent = "";
+      for (let index = 0; index < data.length; index++) {
+        const course = data[index];
+
+        tbodyContent += `
+        <tr>
+          <td>${index + 1}</td>
+          <td>${course.name}</td>
+          <td>$${course.price}</td>
+          <td>${course.quantity}</td>
+          <td><button onclick="handleReturn('${
+            course.id
+          }')" >Trả hàng</button></td>
+        </tr>`;
+      }
+
+      tbodyElement.innerHTML = tbodyContent;
+    }
+
+    // Mua hàng
+
+    function handleBuy(id) {
+      // B1: Lặp qua store để giảm số lượng
+      let course;
+      for (const item of store) {
+        if (id === item.id) {
+          item.slot--;
+          course = item;
+        }
+      }
+
+      //   Tăng số lượng trong carts
+
+      let isExist = false;
+
+      for (const item of carts) {
+        if (id == item.id) {
+          item.quantity++;
+          isExist = true;
+        }
+      }
+
+      //   Kiểm tra có trong cart hay chưa
+      if (!isExist) {
+        // Không được gán trực tiếp objec băng object khác
+        // const course_2 = course;
+        // console.log(">>>>", course_2);
+        // delete course_2.slot;
+        // console.log(">>>>", course_2);
+
+        // course_2.quantity = 1;
+        // console.log(">>>>", course_2);
+
+        const newCourse = {
+          id: course.id,
+          name: course.name,
+          price: course.price,
+          quantity: 1,
+        };
+        carts.push(newCourse);
+      }
+      console.log(carts);
+      console.log(store);
+
+      //   Hiển thị lại
+      renderCart(carts);
+      renderStore(store);
+    }
+
+    function handleReturn(id) {
+      // B1: Nhập số lượng muốn trả
+
+      const quantity = Number(prompt("Nhập số lượng muốn trả"));
+
+      // Kiểm tra hàng trong cart --> trừ
+      for (let index = 0; index < carts.length; index++) {
+        const item = carts[index];
+        if (id == item.id) {
+          if (item.quantity < quantity) {
+            alert("Chỉ có thể trả tối đa " + item.quantity + " sản phẩm");
+            return;
+          }
+          item.quantity -= quantity;
+          if (item.quantity === 0) {
+            carts.splice(index, 1);
+          }
+        }
+
+        for (const item of store) {
+          if (id === item.id) {
+            item.slot += quantity;
+          }
+        }
+
+        //   Hiển thị lại
+        renderCart(carts);
+        renderStore(store);
+        console.log(store);
+      }
+
+      // Tăng số lượng trong store
+    }
+  </script>
+</html>
