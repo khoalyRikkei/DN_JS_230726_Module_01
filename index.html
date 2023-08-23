@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #rectangle {
+        background-color: red;
+        width: 100px;
+      }
+      .hidden {
+        display: none;
+      }
+      .text-red {
+        color: red;
+      }
+
+      img {
+        position: relative;
+        left: -050px;
+      }
+      header {
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header onmouseover="mouseover()">
+      <h1>Session 19 - DOM</h1>
+    </header>
+
+    <main id="main">
+      <h3 id="text-title">Đây là title</h3>
+      <section>
+        <p class="text-red">Đây là thẻ p1</p>
+        <p class="text-red">Đây là thẻ p2</p>
+
+        <p class="text-red">Đây là thẻ p3</p>
+
+        <p class="text-red">Đây là thẻ p4</p>
+
+        <button onclick="ex_01()">Click ID</button>
+        <button onclick="ex_02()">Click Class</button>
+        <button onclick="ex_03()">Click tagname</button>
+        <button onclick="ex_04()">Click querySelector</button>
+        <button onclick="ex_05()">Click querySelectorAll</button>
+      </section>
+      <section id="box">
+        <p class="text-red">Đây là thẻ p1</p>
+        <p class="text-red">Đây là thẻ p2</p>
+
+        <p class="text-red">Đây là thẻ p3</p>
+
+        <p class="text-red">Đây là thẻ p4</p>
+      </section>
+      <h3 id="text-title">Đây là title fake</h3>
+      <input type="text" value="hELLO CÁC BẠN" />
+      <fieldset>
+        <legend>Truy vấn tới phần tử HTML và gán lại thuộc tính</legend>
+        <h3 id="change-text"></h3>
+        <input type="text" value="hELLO CÁC BẠN" />
+        <input type="text" value="hELLO CÁC BẠN" />
+
+        <button onclick="ex_06()" style="color: red">Change innerHTML</button>
+        <button onclick="ex_07()">Change attribute</button>
+        <button onclick="ex_08()">Change setAttribute</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Bài tập</legend>
+        <h3>Vẽ hình chữ nhật</h3>
+        <p id="rectangle"></p>
+        <button onclick="lab_01()">Nhập</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Example</legend>
+        <h3>Dùng className</h3>
+
+        <p id="toggle" class="text-red">Tô là toggle</p>
+        <button onclick="ex_09()">Toggle</button>
+      </fieldset>
+      <input type="text" value="hELLO CÁC BẠN" />
+
+      <fieldset>
+        <legend>Bài 2</legend>
+        <img
+          src="https://img3.thuthuatphanmem.vn/uploads/2019/10/10/anh-doremon-dang-yeu_033146112.png"
+          alt=""
+          width="100"
+          class="image"
+        />
+        <button onclick="move('top')">Trên</button>
+        <button onclick="move('down')">Dưới</button>
+        <button onclick="move('left')">Trái</button>
+        <button onclick="move('right')">Phải</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Bài 3</legend>
+        <h3>Click vào btn -> thay đổi ngẫu nhiên màu sắc body</h3>
+        <button onclick="changeBackground()">Change background</button>
+      </fieldset>
+
+      <section>
+        <h2>Thêm, xóa, thay thế phần tử</h2>
+        <ul id="list-add"></ul>
+        <button onclick="addElement()">Add</button>
+        <button onclick="addImg(this)">Add IMG</button>
+        <button onclick="deleteElement()">Delete element</button>
+      </section>
+    </main>
+  </body>
+  <script src="./script.js"></script>
+</html>
