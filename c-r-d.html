@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form">
+      <input type="text" id="input-add" />
+      <button onclick="handleAdd()">Thêm cầu thủ</button>
+      <button onclick="handleDeleteAdd()">Xóa tất cả</button>
+    </div>
+    <ul id="list-player">
+      <li>cầu thủ 1 <button onclick="handleDelete1(0)">Delete</button></li>
+      <li>cầu thủ 2 <button>Delete</button></li>
+
+      <li>cầu thủ 3 <button>Delete</button></li>
+    </ul>
+    <script>
+      const inputElement = document.querySelector("#input-add");
+
+      function handleAdd() {
+        const players = JSON.parse(localStorage.getItem("players")) || []; // bắt buộc trả về mảng
+        // console.log(players);
+        // if (players === null) {
+        //   players = [];
+        // }
+        // B1: lấy dữ liệu từ database
+
+        // B2: Lấy giá trị input
+        const newPlayer = inputElement.value;
+        // Xóa giá trị ô input
+        inputElement.value = "";
+
+        // B3: đưa vào mảng
+        players.push(newPlayer);
+
+        // B4: Đẩy lên localstorage
+        localStorage.setItem("players", JSON.stringify(players));
+
+        // B5: render
+        renderData();
+      }
+
+      renderData();
+      function renderData() {
+        const players = JSON.parse(localStorage.getItem("players")) || []; // ??
+
+        const listElement = "";
+        // Lặp qua hiển thị
+
+        players.forEach((player) => {
+          console.log(player);
+        });
+      }
+    </script>
+  </body>
+</html>

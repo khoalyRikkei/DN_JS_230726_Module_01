@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session 20</title>
+  </head>
+  <body>
+    <header>
+      <h1>Session 20 - Storing data web</h1>
+      <span id="username"></span>
+    </header>
+
+    <main>
+      <fieldset>
+        <legend>Example</legend>
+        <h3>Gửi dữ liệu lên local</h3>
+
+        <button onclick="ex_01()">Click</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Example 2</legend>
+        <h3>Gửi dữ liệu lên local</h3>
+        <p>
+          Nhập tên từ người dùng -> chuyển lên localStorage với key là username
+        </p>
+        <p>
+          Nếu trên localStorage có username -> hiển thị xin chào giá trị của
+          username trên trình duyệt
+        </p>
+
+        <button onclick="ex_02()">Click</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Example 3</legend>
+        <h3>Thêm, xóa tên user</h3>
+        <p>Có 1 ô input để điền thông tin</p>
+        <p>Có 1 button Add</p>
+        <p>Click vào add -> hiển thị thông tin vừa thêm bên dưới</p>
+        <p>Load lại không bị mất thông tin</p>
+
+        <div class="input-username">
+          <input type="text" placeholder="Nhập vào 1 tên" id="input-ex-03" />
+          <button onclick="handleAddEx_03()" id="btn-add-edit">Add</button>
+        </div>
+        <br />
+        <p id="result-ex-03"></p>
+        <br />
+        <br />
+      </fieldset>
+
+      <fieldset>
+        <legend>SessionStorage</legend>
+        <h3>Thêm, cập nhật, xóa</h3>
+
+        <button onclick="ex_04_set()">set</button>
+        <button onclick="ex_04_get()">get</button>
+
+        <button onclick="ex_04_remove()">remove</button>
+      </fieldset>
+      <fieldset>
+        <legend>cookie</legend>
+        <h3>Thêm, cập nhật, xóa</h3>
+
+        <button onclick="ex_05_add()">Add</button>
+        <button onclick="ex_05_set()">Set</button>
+
+        <button onclick="ex_05_clear()">remove</button>
+      </fieldset>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
